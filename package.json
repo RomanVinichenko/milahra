@@ -7,7 +7,7 @@
         "stylelint": "stylelint \"**/*.scss\"",
         "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix",
         "dev": "parcel -p 3000",
-        "build": "rm -rf dist & parcel build"
+        "build": "rm -rf dist & parcel build --output public"
     },
     "dependencies": {
         "parcel": "^2.0.1"
