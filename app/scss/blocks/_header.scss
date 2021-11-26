@@ -1,0 +1,48 @@
+.header {
+    padding: 18px 0;
+    background-color: $background;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+
+        &__list {
+            display: flex;
+            margin-right: auto;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+
+        &__contacts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__tel {
+            margin-right: 12px;
+            padding: 0 18px;
+        }
+
+        &__button {
+            padding: 10px 18px;
+            width: 216px;
+        }
+    }
+
+    .logo {
+        margin-right: 40px;
+
+        &__img {
+            width: 148px;
+            height: 40px;
+            object-fit: cover;
+        }
+    }
+}

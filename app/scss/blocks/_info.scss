@@ -1,0 +1,66 @@
+.info {
+    padding: 96px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 20px;
+        padding-top: 85px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.22;
+        letter-spacing: -1.2px;
+        color: $title;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 66px;
+            height: 67px;
+            background-image: url("../images/sharp.svg");
+        }
+    }
+
+    &__box {
+        max-width: 365px;
+    }
+
+    &__subtitle {
+        margin-bottom: 34px;
+        font-size: 20px;
+    }
+
+    &__subject {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__subjects {
+        max-width: 365px;
+    }
+
+    &__subject-text {
+        margin-bottom: 22px;
+    }
+
+    &__subject-title {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        color: $title;
+    }
+
+    &__services,
+    &__service {
+        border-bottom: 1px solid $accent;
+        font-weight: 500;
+        color: $accent;
+    }
+}
