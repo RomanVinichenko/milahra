@@ -1,27 +1,33 @@
 {
-    "name": "template-gulp",
+    "name": "milahra",
     "version": "2.0.0",
     "description": "",
-    "main": "gulpfile.js",
+    "source": "app/index.html",
     "scripts": {
         "stylelint": "stylelint \"**/*.scss\"",
         "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix",
-        "deploy": "gh-pages -d app"
+        "dev": "parcel -p 3000",
+        "build": "rm -rf dist & parcel build"
+    },
+    "dependencies": {
+        "parcel": "^2.0.1"
+    },
+    "browserslist": [
+        "last 2 version",
+        "> 0.5%",
+        "ie >= 11"
+    ],
+    "postcss": {
+        "plugins": [
+            "autoprefixer"
+        ]
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "browser-sync": "^2.26.14",
-        "del": "^6.0.0",
+        "@parcel/transformer-sass": "^2.0.1",
         "gh-pages": "^3.1.0",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-concat": "^2.6.1",
-        "gulp-html-minifier-terser": "^6.0.1",
-        "gulp-sass": "^4.1.0",
-        "gulp-sourcemaps": "^3.0.0",
-        "gulp-uglify": "^3.0.2",
         "prettier": "^2.3.0",
         "stylelint": "^13.9.0",
         "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
