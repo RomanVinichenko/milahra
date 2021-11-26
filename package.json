@@ -2,11 +2,12 @@
     "name": "milahra",
     "version": "2.0.0",
     "description": "",
+    "source": "app/index.html",
     "scripts": {
         "stylelint": "stylelint \"**/*.scss\"",
         "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix",
-        "dev": "parcel app/index.html -p 3000",
-        "build": "parcel app/index.html build --output public"
+        "dev": "parcel -p 3000",
+        "build": "parcel build"
     },
     "dependencies": {
         "parcel": "^2.0.1"
