@@ -6,7 +6,7 @@
     "scripts": {
         "stylelint": "stylelint \"**/*.scss\"",
         "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix",
-        "dev": "parcel -p 3000",
+        "dev": "parcel -p 3000 --no-cache",
         "build": "parcel build"
     },
     "dependencies": {
