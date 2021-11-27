@@ -1,12 +1,10 @@
 .info {
     padding: 96px 0;
-    @include r($lg) {
-        padding: 64px 0;
-    }
 
     &__inner {
         display: flex;
         justify-content: space-between;
+
         @include r($md) {
             flex-direction: column;
         }
@@ -21,10 +19,6 @@
         line-height: 1.22;
         letter-spacing: -1.2px;
         color: $title;
-        @include r($lg) {
-            font-size: 30px;
-            margin-bottom: 16px;
-        }
 
         &::after {
             content: "";
@@ -33,30 +27,39 @@
             top: 0;
             width: 66px;
             height: 67px;
-            background-image: url("../images/sharp.svg");
+            background-image: url("../../images/sharp.svg");
+        }
+
+        @include r($lg) {
+            margin-bottom: 16px;
+            font-size: 30px;
         }
     }
 
     &__box {
-        max-width: 365px;
         margin-right: 64px;
+        max-width: 365px;
+
         @include r($md) {
+            margin-right: 0;
             margin-bottom: 48px;
             max-width: 100%;
-            margin-right: 0;
         }
     }
 
     &__subtitle {
         margin-bottom: 34px;
         font-size: 20px;
+
         @include r($lg) {
-            font-size: 18px;
             margin-bottom: 20px;
+            font-size: 18px;
         }
     }
+
     &__content {
         display: flex;
+
         @include r($xl) {
             flex-direction: column;
         }
@@ -70,19 +73,23 @@
 
     &__subjects {
         max-width: 365px;
-        @include r($xl) {
-            max-width: 100%;
-        }
-        &:not(:last-child){
+
+        &:not(:last-child) {
             margin-right: 64px;
+
             @include r($md) {
                 margin-right: 0;
             }
+        }
+
+        @include r($xl) {
+            max-width: 100%;
         }
     }
 
     &__subject-text {
         margin-bottom: 22px;
+
         @include r($lg) {
             margin-bottom: 15px;
         }
@@ -93,6 +100,7 @@
         font-weight: 500;
         font-size: 20px;
         color: $title;
+
         @include r($lg) {
             margin-bottom: 4px;
         }
@@ -108,5 +116,9 @@
         &:hover {
             border-bottom: 1px solid transparent;
         }
+    }
+
+    @include r($lg) {
+        padding: 64px 0;
     }
 }

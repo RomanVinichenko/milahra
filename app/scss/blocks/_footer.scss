@@ -1,8 +1,5 @@
 .footer {
     position: relative;
-    @include r($md) {
-        display: none;
-    }
 
     &::after {
         content: "";
@@ -61,6 +58,9 @@
     &__img {
         max-width: 480px;
         border-radius: 0 24px 24px 0;
+    }
 
+    @include r($md) {
+        display: none;
     }
 }

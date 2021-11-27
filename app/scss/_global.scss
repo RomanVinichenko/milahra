@@ -4,13 +4,13 @@ body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     color: $text;
-    display: flex;
-    flex-direction: column;
     background-color: $wh;
 }
 
@@ -38,10 +38,6 @@ body {
     background-color: $accent;
     transition: background-color 0.3s;
     cursor: pointer;
-    @include r($md) {
-        width: 100%;
-        max-width: 345px;
-    }
 
     &:hover {
         background-color: $accent-hover;
@@ -64,6 +60,11 @@ body {
         &:active {
             background-color: $gray;
         }
+    }
+
+    @include r($md) {
+        width: 100%;
+        max-width: 345px;
     }
 }
 
