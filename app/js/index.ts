@@ -17,10 +17,10 @@ modalClose.addEventListener('click', () => {
 form.addEventListener('submit', (event: Event) => {
     event.preventDefault();
     modal.style.display = 'flex';
-    modalContent.innerHTML = `Заявка отправлена на номер ${form.telephone.value}`;
+    modalContent.innerHTML = `Заявка відправлена на номер ${form.telephone.value}`;
     form.telephone.value = '';
 });
 
 burger.addEventListener('click', () => {
-    menu.classList.toggle('fefef');
+    menu.classList.toggle('menu__list--active');
 });

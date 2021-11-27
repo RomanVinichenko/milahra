@@ -23,8 +23,8 @@ body {
     z-index: 9999999;
     display: flex;
     width: 100%;
-    text-align: center;
     height: 100%;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
 
     &__wrap {
@@ -38,7 +38,7 @@ body {
         height: 320px;
         max-width: 600px;
         border-radius: 6px;
-        background-color: #fff;
+        background-color: $wh;
     }
 
     &__close {

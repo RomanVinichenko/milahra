@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     padding: 18px 0;
     background-color: $background;
 
@@ -13,17 +14,48 @@
             margin-right: auto;
 
             @include r($lg) {
-                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 10;
+                display: block;
+                align-items: center;
+                padding: 60px 0 10px;
+                border-bottom: 2px solid $gray;
+                text-align: center;
+                background-color: rgba($wh, 0.95);
+                transform: translateY(-200%);
+                transition: all 0.5s;
             }
         }
 
+        &__list--active {
+            transform: translateY(0);
+        }
+
         &__item {
+            transition: color 0.3s;
+
             &:not(:last-child) {
                 margin-right: 32px;
 
                 @include r($xl) {
                     margin-right: 18px;
                 }
+
+                @include r($md) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:hover {
+                color: $title;
+            }
+
+            @include r($md) {
+                color: $title;
             }
         }
 
@@ -47,6 +79,7 @@
         }
 
         &__burger {
+            z-index: 15;
             display: none;
             border: none;
             background-color: transparent;
