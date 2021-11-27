@@ -3,9 +3,9 @@
 2) yarn dev / npm dev
 
 ### Основные технологии
-Сборщик Parcel, код стилей написан на препроцессоре SCSS;
+Сборщик Parcel, код стилей написан на препроцессоре SCSS
 ### Доп. технологии
-StyleLint, Prettier;
+StyleLint, Prettier
 ### Деплой
-milahra.vercel.app;
+milahra.vercel.app
 
