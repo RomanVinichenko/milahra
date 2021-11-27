@@ -12,13 +12,23 @@
 </head>
 
 <body>
+<div class="modal" id="modal" style="display: none;">
+    <div class="modal__wrap">
+            <span class="modal__close" id="modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 500 500">
+                    <path d="M425 75 75 425m350 0L75 75" style="fill:none;stroke:#f30;stroke-width:40;stroke-linecap:round" />
+                </svg>
+            </span>
+        <div class="modal__content" id="modal-content"></div>
+    </div>
+</div>
 <header class="header">
     <div class="container">
         <nav class="menu">
             <a class="logo" href="#">
                 <img class="logo__img" width="148" height="40" src="images/logo.svg" alt="Логотип" />
             </a>
-            <ul class="menu__list">
+            <ul class="menu__list" id="menu">
                 <li class="menu__item">
                     <a class="menu__link" href="#">Послуги</a>
                 </li>
@@ -39,7 +49,7 @@
                 <a class="menu__tel" href="tel:380952517048">+38&nbsp;095&nbsp;251&nbsp;70&nbsp;48</a>
                 <button class="button">Записатись на прийом</button>
             </div>
-            <button class="menu__burger">
+            <button class="menu__burger" id="burger">
                 <img class="menu__burger-img" src="images/menu.svg" alt="Бургер меню">
             </button>
         </nav>
@@ -55,16 +65,10 @@
                         Отримуй грунтовне та якісне обстеження, вірний діагноз, покроковий
                         план лікування, рекомендації.
                     </p>
-                    <form class="hero__form">
+                    <form class="hero__form" id="form-telephone">
                         <label class="hero__label sr-only" for="tel"></label>
-                        <input
-                            class="hero__tel"
-                            type="tel"
-                            placeholder="Твій номер телефону"
-                            id="tel"
-                            name="tel"
-                            required
-                        />
+                        <input class="hero__tel" type="tel" placeholder="Твій номер телефону" id="tel"
+                               name="telephone" required />
                         <p class="hero__privacy">
                             We care about your data in our <span>privacy policy</span>
                         </p>
@@ -74,7 +78,7 @@
                     </form>
                     <p class="hero__message">Ми тобі зателефонуємо найближчим часом</p>
                 </div>
-                <picture>
+                <picture class="hero__pic">
                     <source srcset="images/hero.webp" type="image/webp" />
                     <source srcset="images/hero.jpg" type="image/jpeg" />
                     <img class="hero__img" width="560" height="641" src="images/hero.jpg" alt="Фото-візитка" />
@@ -159,6 +163,6 @@
                 </div>
             </div>
         </footer>
-<script src="js/index.js"></script>
+<script src="js/index.ts" type="module"></script>
 </body>
 </html>

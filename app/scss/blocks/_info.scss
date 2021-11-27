@@ -27,7 +27,7 @@
             top: 0;
             width: 66px;
             height: 67px;
-            background-image: url("../../images/sharp.svg");
+            background-image: url("../images/sharp.svg");
         }
 
         @include r($lg) {
@@ -39,6 +39,12 @@
     &__box {
         margin-right: 64px;
         max-width: 365px;
+
+        @include r($xl) {
+            margin-right: 30px;
+            width: 100%;
+            max-width: 350px;
+        }
 
         @include r($md) {
             margin-right: 0;
@@ -68,6 +74,10 @@
     &__subject {
         &:not(:last-child) {
             margin-bottom: 32px;
+
+            @include r($md) {
+                margin-bottom: 40px;
+            }
         }
     }
 
@@ -79,6 +89,7 @@
 
             @include r($md) {
                 margin-right: 0;
+                margin-bottom: 40px;
             }
         }
 
