@@ -1,168 +1,225 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Milahra" />
-    <meta property="og:description" content="Довіряй здоровья своїх зубів професіоналам" />
-    <meta property="og:image" content="images/hero.jpg" />
-    <link rel="icon" href="images/favicon.svg" type="image/svg">
-    <title>Milahra</title>
-    <link rel="stylesheet" href="scss/style.scss" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Milahra" />
+        <meta property="og:description" content="Довіряй здоровья своїх зубів професіоналам" />
+        <meta property="og:image" content="images/hero.jpg" />
+        <link rel="icon" href="images/favicon.svg" type="image/svg" />
+        <title>Milahra</title>
+        <link rel="stylesheet" href="scss/style.scss" />
+    </head>
 
-<body>
-<div class="modal" id="modal" style="display: none;">
-    <div class="modal__wrap">
-            <span class="modal__close" id="modal-close">
-                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 500 500">
-                    <path d="M425 75 75 425m350 0L75 75" style="fill:none;stroke:#f30;stroke-width:40;stroke-linecap:round" />
-                </svg>
-            </span>
-        <div class="modal__content" id="modal-content"></div>
-    </div>
-</div>
-<header class="header">
-    <div class="container">
-        <nav class="menu">
-            <a class="logo" href="#">
-                <img class="logo__img" width="148" height="40" src="images/logo.svg" alt="Логотип" />
-            </a>
-            <ul class="menu__list" id="menu">
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Послуги</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Про клініку</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Лікарі</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Блог</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Контакти</a>
-                </li>
-            </ul>
-            <div class="menu__contacts">
-                <a class="menu__tel" href="tel:380952517048">+38&nbsp;095&nbsp;251&nbsp;70&nbsp;48</a>
-                <button class="button">Записатись на прийом</button>
-            </div>
-            <button class="menu__burger" id="burger">
-                <img class="menu__burger-img" src="images/menu.svg" alt="Бургер меню">
-            </button>
-        </nav>
-    </div>
-</header>
-<main class="main">
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero__info">
-                    <h1 class="hero__title">Довіряй здоровья своїх зубів професіоналам</h1>
-                    <p class="hero__subtitle">
-                        Отримуй грунтовне та якісне обстеження, вірний діагноз, покроковий
-                        план лікування, рекомендації.
-                    </p>
-                    <form class="hero__form" id="form-telephone">
-                        <label class="hero__label sr-only" for="tel"></label>
-                        <input class="hero__tel" type="tel" placeholder="Твій номер телефону" id="tel"
-                               name="telephone" required />
-                        <p class="hero__privacy">
-                            We care about your data in our <span>privacy policy</span>
-                        </p>
-                        <button class="button" type="submit">
-                            Записатись
-                        </button>
-                    </form>
-                    <p class="hero__message">Ми тобі зателефонуємо найближчим часом</p>
-                </div>
-                <picture class="hero__pic">
-                    <source srcset="images/hero.webp" type="image/webp" />
-                    <source srcset="images/hero.jpg" type="image/jpeg" />
-                    <img class="hero__img" width="560" height="641" src="images/hero.jpg" alt="Фото-візитка" />
-                </picture>
+    <body>
+        <div class="modal" id="modal" style="display: none">
+            <div class="modal__wrap">
+                <span class="modal__close" id="modal-close">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        viewBox="0 0 500 500"
+                    >
+                        <path
+                            d="M425 75 75 425m350 0L75 75"
+                            style="
+                                fill: none;
+                                stroke: #f30;
+                                stroke-width: 40;
+                                stroke-linecap: round;
+                            "
+                        />
+                    </svg>
+                </span>
+                <div class="modal__content" id="modal-content"></div>
             </div>
         </div>
-    </section>
-    <section class="info">
-        <div class="container">
-            <div class="info__inner">
-                <div class="info__box">
-                    <h2 class="info__title">Стоматологія яка турбується про тебе</h2>
-                    <p class="info__subtitle">
-                        Ми знаходимося на Лук’янівській «MILAHRA Dental Clinic»
-                    </p>
-                    <a class="info__service" href="#">Усі послуги</a>
-                </div>
-                <div class="info__content">
-                    <ul class="info__subjects">
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Ортодонтія</h3>
-                            <p class="info__subject-text">Розв’язання проблем патології прикусу, порушення жувальної
-                                функції, неправильного розміщення або прорізування зубів, дефектів зубного ряду.</p>
-                            <a class="info__service" href="#"> Дізнатись більше </a>
+        <header class="header">
+            <div class="container">
+                <nav class="menu">
+                    <a class="logo" href="#">
+                        <img
+                            class="logo__img"
+                            width="148"
+                            height="40"
+                            src="images/logo.svg"
+                            alt="Логотип"
+                        />
+                    </a>
+                    <ul class="menu__list" id="menu">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Послуги</a>
                         </li>
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Хірургічна стоматологія</h3>
-                            <p class="info__subject-text">Імплантація, відновлення втрачених зубів, видалення
-                                зруйнованих зубів, а також процедури для відновлення зубощелепної системи.</p>
-                            <a class="info__service" href="#">Дізнатись більше</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Про клініку</a>
                         </li>
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Естетична медицина</h3>
-                            <p class="info__subject-text">Професійний догляд за шкірою, її відновлення, омолодження та
-                                усунення естетичних дефектів.</p>
-                            <a class="info__service" href="#">Дізнатись більше</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Лікарі</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Блог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Контакти</a>
                         </li>
                     </ul>
-                    <ul class="info__subjects">
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Дитяча стоматологія</h3>
-                            <p class="info__subject-text">Що отримає ваша дитина? Дружніх лікарів, повний спектр послуг,
-                                відповідно до вікових особливостей. Комфорт. Це коли дитина іде до лікаря як до свого
-                                друга.</p>
-                            <a class="info__service" href="#">Дізнатись більше</a>
-                        </li>
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Профілактика та гігієна</h3>
-                            <p class="info__subject-text">Здорові зуби, чистий подих. Розуміння доцільності регулярних
-                                гігієнічних заходів. Звичку слідкувати за станом свого стоматологічного здоров’я.</p>
-                            <a class="info__service" href="#">Дізнатись більше</a>
-                        </li>
-                        <li class="info__subject">
-                            <h3 class="info__subject-title">Терапевтична стоматологія</h3>
-                            <p class="info__subject-text">Всі маніпуляції, як то ендодонтичне лікування кореневих
-                                каналів, лікування карієсу та художня реставрація, проводяться під операційним
-                                мікроскопом та з використанням ізоляції.</p>
-                            <a class="info__service" href="#">Дізнатись більше</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="menu__contacts">
+                        <a class="menu__tel" href="tel:380952517048"
+                            >+38&nbsp;095&nbsp;251&nbsp;70&nbsp;48</a
+                        >
+                        <button class="button">Записатись на прийом</button>
+                    </div>
+                    <button class="menu__burger" id="burger">
+                        <img class="menu__burger-img" src="images/menu.svg" alt="Бургер меню" />
+                    </button>
+                </nav>
             </div>
-        </div>
-    </section>
-</main>
+        </header>
+        <main class="main">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="hero__info">
+                            <h1 class="hero__title">Довіряй здоровья своїх зубів професіоналам</h1>
+                            <p class="hero__subtitle">
+                                Отримуй грунтовне та якісне обстеження, вірний діагноз, покроковий
+                                план лікування, рекомендації.
+                            </p>
+                            <form class="hero__form" id="form-telephone">
+                                <label class="hero__label sr-only" for="tel"></label>
+                                <input
+                                    class="hero__tel"
+                                    type="tel"
+                                    placeholder="Твій номер телефону"
+                                    id="tel"
+                                    name="telephone"
+                                    required
+                                />
+                                <p class="hero__privacy">
+                                    We care about your data in our <span>privacy policy</span>
+                                </p>
+                                <button class="button" type="submit">Записатись</button>
+                            </form>
+                            <p class="hero__message">Ми тобі зателефонуємо найближчим часом</p>
+                        </div>
+                        <picture class="hero__pic">
+                            <source srcset="images/hero.webp" type="image/webp" />
+                            <source srcset="images/hero.jpg" type="image/jpeg" />
+                            <img
+                                class="hero__img"
+                                width="560"
+                                height="641"
+                                src="images/hero.jpg"
+                                alt="Фото-візитка"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="info">
+                <div class="container">
+                    <div class="info__inner">
+                        <div class="info__box">
+                            <h2 class="info__title">Стоматологія яка турбується про тебе</h2>
+                            <p class="info__subtitle">
+                                Ми знаходимося на Лук’янівській «MILAHRA Dental Clinic»
+                            </p>
+                            <a class="info__service" href="#">Усі послуги</a>
+                        </div>
+                        <div class="info__content">
+                            <ul class="info__subjects">
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Ортодонтія</h3>
+                                    <p class="info__subject-text">
+                                        Розв’язання проблем патології прикусу, порушення жувальної
+                                        функції, неправильного розміщення або прорізування зубів,
+                                        дефектів зубного ряду.
+                                    </p>
+                                    <a class="info__service" href="#"> Дізнатись більше </a>
+                                </li>
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Хірургічна стоматологія</h3>
+                                    <p class="info__subject-text">
+                                        Імплантація, відновлення втрачених зубів, видалення
+                                        зруйнованих зубів, а також процедури для відновлення
+                                        зубощелепної системи.
+                                    </p>
+                                    <a class="info__service" href="#">Дізнатись більше</a>
+                                </li>
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Естетична медицина</h3>
+                                    <p class="info__subject-text">
+                                        Професійний догляд за шкірою, її відновлення, омолодження та
+                                        усунення естетичних дефектів.
+                                    </p>
+                                    <a class="info__service" href="#">Дізнатись більше</a>
+                                </li>
+                            </ul>
+                            <ul class="info__subjects">
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Дитяча стоматологія</h3>
+                                    <p class="info__subject-text">
+                                        Що отримає ваша дитина? Дружніх лікарів, повний спектр
+                                        послуг, відповідно до вікових особливостей. Комфорт. Це коли
+                                        дитина іде до лікаря як до свого друга.
+                                    </p>
+                                    <a class="info__service" href="#">Дізнатись більше</a>
+                                </li>
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Профілактика та гігієна</h3>
+                                    <p class="info__subject-text">
+                                        Здорові зуби, чистий подих. Розуміння доцільності регулярних
+                                        гігієнічних заходів. Звичку слідкувати за станом свого
+                                        стоматологічного здоров’я.
+                                    </p>
+                                    <a class="info__service" href="#">Дізнатись більше</a>
+                                </li>
+                                <li class="info__subject">
+                                    <h3 class="info__subject-title">Терапевтична стоматологія</h3>
+                                    <p class="info__subject-text">
+                                        Всі маніпуляції, як то ендодонтичне лікування кореневих
+                                        каналів, лікування карієсу та художня реставрація,
+                                        проводяться під операційним мікроскопом та з використанням
+                                        ізоляції.
+                                    </p>
+                                    <a class="info__service" href="#">Дізнатись більше</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__box">
                         <h2 class="footer__title">Запишись на первинний огляд</h2>
-                        <p class="footer__subtitle">Тобі достатньо заповнити форму, після чого з тобою зв’яжуться наші адміністратори та домовляться про час прийому</p>
+                        <p class="footer__subtitle">
+                            Тобі достатньо заповнити форму, після чого з тобою зв’яжуться наші
+                            адміністратори та домовляться про час прийому
+                        </p>
                         <div class="footer__buttons">
-                            <button class="button button--primary footer__button ">Дізнатись більше</button>
+                            <button class="button button--primary footer__button">
+                                Дізнатись більше
+                            </button>
                             <button class="button footer__button">Записатись</button>
                         </div>
                     </div>
                     <picture>
-                        <source srcset="images/footer.webp" type="image/webp"  />
+                        <source srcset="images/footer.webp" type="image/webp" />
                         <source srcset="images/footer.jpg" type="image/jpeg" />
-                        <img class="footer__img" width="480" height="400" src="images/footer.jpg" alt="Фото-візитка" />
+                        <img
+                            class="footer__img"
+                            width="480"
+                            height="400"
+                            src="images/footer.jpg"
+                            alt="Фото-візитка"
+                        />
                     </picture>
                 </div>
             </div>
         </footer>
-<script src="js/index.ts" type="module"></script>
-</body>
+        <script src="js/index.ts" type="module"></script>
+    </body>
 </html>
