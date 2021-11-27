@@ -7,17 +7,36 @@
         justify-content: space-between;
         padding: 64px 0 96px;
         min-height: calc(100vh - 80px);
+        @include r($lg) {
+            padding: 0;
+        }
+        @include r($md) {
+            min-height: 100%;
+        }
+
     }
 
+
     &__title {
+        max-width: 690px;
         position: relative;
         margin-right: -30px;
         margin-bottom: 24px;
         font-weight: 600;
         font-size: 60px;
-        line-height: 1.2;
+        line-height: 1.22;
         letter-spacing: -1.2px;
         color: $title;
+        @include r($xxl) {
+            font-size: 45px;
+            margin-right: 0;
+        }
+        @include r($lg) {
+            font-size: 36px;
+        }
+        @include r($xl) {
+            margin-bottom: 16px;
+        }
 
         &::after {
             content: "";
@@ -27,6 +46,9 @@
             width: 463px;
             height: 15px;
             background-image: url("../images/vector.svg");
+            @include r($xxl) {
+                display: none;
+            }
         }
     }
 
@@ -34,12 +56,27 @@
         margin-bottom: 48px;
         max-width: 560px;
         font-size: 20px;
+        @include r($xl) {
+            margin-bottom: 32px;
+        }
+        @include r($lg) {
+            font-size: 18px;
+        }
+        @include r($md) {
+            max-width: 100%;
+        }
     }
 
     &__form {
         display: flex;
         align-items: center;
         margin-bottom: 8px;
+        @include r($md) {
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+
+        }
     }
 
     &__tel {
@@ -50,19 +87,31 @@
         border-radius: 8px;
         box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
         background-color: $wh;
-    }
-
-    &__button {
-        padding: 12px 20px;
-        width: 133px;
+        @include r($lg) {
+            max-width: 345px;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        @include r($md) {
+            margin-right: 0;
+        }
     }
 
     &__info {
-        z-index: 2;
+        @include r($xl) {
+            max-width: 440px;
+        }
+        @include r($md) {
+            max-width: 100%;
+            padding: 64px 0;
+        }
     }
 
     &__message {
         font-size: 14px;
+        @include r($md) {
+            display: none;
+        }
     }
 
     &__pic {
@@ -81,10 +130,26 @@
             background-image: url("../images/arrow.svg");
         }
     }
-
     &__img {
-        width: 100%;
-        max-height: 640px;
         object-fit: cover;
+        @include r($xl) {
+            width: 450px;
+            height: 515px;
+        }
+        @include r($md) {
+            display: none;
+        }
+    }
+    &__privacy {
+        display: none;
+        font-size: 14px;
+        color: $violet;
+        margin-bottom: 16px;
+        @include r($md) {
+            display: block;
+        }
+        span {
+            text-decoration: underline;
+        }
     }
 }

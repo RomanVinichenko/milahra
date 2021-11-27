@@ -1,9 +1,15 @@
 .info {
     padding: 96px 0;
+    @include r($lg) {
+        padding: 64px 0;
+    }
 
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include r($md) {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -15,6 +21,10 @@
         line-height: 1.22;
         letter-spacing: -1.2px;
         color: $title;
+        @include r($lg) {
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
 
         &::after {
             content: "";
@@ -29,11 +39,27 @@
 
     &__box {
         max-width: 365px;
+        margin-right: 64px;
+        @include r($md) {
+            margin-bottom: 48px;
+            max-width: 100%;
+            margin-right: 0;
+        }
     }
 
     &__subtitle {
         margin-bottom: 34px;
         font-size: 20px;
+        @include r($lg) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+    &__content {
+        display: flex;
+        @include r($xl) {
+            flex-direction: column;
+        }
     }
 
     &__subject {
@@ -44,10 +70,22 @@
 
     &__subjects {
         max-width: 365px;
+        @include r($xl) {
+            max-width: 100%;
+        }
+        &:not(:last-child){
+            margin-right: 64px;
+            @include r($md) {
+                margin-right: 0;
+            }
+        }
     }
 
     &__subject-text {
         margin-bottom: 22px;
+        @include r($lg) {
+            margin-bottom: 15px;
+        }
     }
 
     &__subject-title {
@@ -55,6 +93,9 @@
         font-weight: 500;
         font-size: 20px;
         color: $title;
+        @include r($lg) {
+            margin-bottom: 4px;
+        }
     }
 
     &__services,
@@ -62,5 +103,10 @@
         border-bottom: 1px solid $accent;
         font-weight: 500;
         color: $accent;
+        transition: border-bottom 0.3s;
+
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
     }
 }

@@ -1,10 +1,16 @@
 .footer {
+    flex-grow: 1;
     position: relative;
+    @include r($md) {
+        display: none;
+    }
+
 
     &::after {
         content: "";
         position: absolute;
         bottom: 0;
+        z-index: 1;
         width: 100%;
         height: 329px;
         background: linear-gradient(180deg, rgba(16, 24, 40, 0) 0%, #101828 100%);
@@ -28,6 +34,8 @@
     }
 
     &__title {
+        position: relative;
+        z-index: 2;
         margin-bottom: 20px;
         font-weight: 600;
         font-size: 36px;
@@ -37,45 +45,24 @@
     }
 
     &__subtitle {
+        position: relative;
+        z-index: 2;
         margin-bottom: 40px;
         font-size: 20px;
         color: $wh;
     }
 
-    &__button--more {
+    &__button {
         z-index: 2;
-        margin-right: 12px;
-        padding: 11px 18px;
-        width: 178px;
-        border: 1px solid $gray;
-        border-radius: 8px;
-        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
-        font-weight: 500;
-        color: $dark;
-        background-color: $wh;
-        transition: background-color 0.3s;
-        cursor: pointer;
 
-        &:hover {
-            background-color: $gray;
+        &:not(:last-child) {
+            margin-right: 12px;
         }
     }
 
-    &__button--record {
-        z-index: 2;
-        padding: 12px 20px;
-        width: 133px;
-    }
-
-    &__pic {
-        width: 100%;
-        height: 400px;
-        max-width: 480px;
-    }
-
     &__img {
-        height: 100%;
+        max-width: 480px;
         border-radius: 0 24px 24px 0;
-        object-fit: cover;
+
     }
 }
